@@ -18,7 +18,7 @@
             <div class="relative h-[155px] flex-none">
                 <img
                 class="h-full"
-                src="@/assets/dashboard/new_dashboard/Kavlr-card-designs-blue.png"
+                src="@/assets/dashboard/new_dashboard/Croxx-card-designs-blue.png"
                 />
                 <div
                 class="absolute top-16 ml-7 font-bold h-[74px] text-white flex flex-col justify-between"
@@ -30,7 +30,7 @@
             <div class="relative h-[155px] flex-none">
                 <img
                 class="h-full"
-                src="@/assets/dashboard/new_dashboard/Kavlr-card-designs-green.png"
+                src="@/assets/dashboard/new_dashboard/Croxx-card-designs-green.png"
                 />
                 <div
                 class="absolute top-16 ml-7 font-bold h-[74px] text-white flex flex-col justify-between"
@@ -42,7 +42,7 @@
             <div class="relative h-[155px] flex-none">
                 <img
                 class="h-full"
-                src="@/assets/dashboard/new_dashboard/Kavlr-card-designs-black.png"
+                src="@/assets/dashboard/new_dashboard/Croxx-card-designs-black.png"
                 />
                 <div
                 class="absolute top-16 ml-7 font-bold h-[74px] text-white flex flex-col justify-between"

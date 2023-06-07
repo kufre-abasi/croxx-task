@@ -1,500 +1,284 @@
 <template>
-  <header class="bg-brand text-white px-0">
-    <div  class="">
+  <header class="bg-white text-black px-0">
+    <div class="mx">
       <router-link to="/"
-        ><img src="@/assets/img/logo-white.svg" class="" alt="Kavlr logo"
+        ><img src="@/assets/logo.png" class="w-[60%] mx-auto" alt="Croxx logo"
       /></router-link>
     </div>
     <!-- The nav -->
-    <nav class="nav !font-light " >
-      <div class="px-4 pb-6" >
-        <h4 class="text-[14px] leading-[18.9px] uppercase font-Satoshi700 mb-3">Home</h4>
-      <button @click="toggleAccordion(0)" :class="{ 'bg-[#494886]': activeIndex === 0 }" class=" w-full p-[10px] pr-0 flex justify-between		rounded-[5px]" >
-        <div 
-          class=" p-[5px] mr-[20px] rounded-[5px] flex justify-between">
-          <CustomerIcon class="place-self-center" />
-        <span 
-        class="place-self-center text-[16px] ml-2 leading-[21.6px] font-Satoshi500 text-white ">Customers</span>
-        </div>
-        <svg class="place-self-center" :class="{ 'rotate-90': activeIndex === 0 }"  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 10.5C12 10.6076 11.9809 10.712 11.9427 10.8132C11.9046 10.9143 11.8537 10.9983 11.7901 11.065L8.27862 14.778C8.13867 14.926 7.96056 15 7.74427 15C7.52799 15 7.34987 14.926 7.20992 14.778C7.06997 14.63 7 14.4417 7 14.213C7 13.9843 7.06997 13.796 7.20992 13.648L10.187 10.5L7.20992 7.35202C7.06997 7.20404 7 7.0157 7 6.787C7 6.5583 7.06997 6.36996 7.20992 6.22197C7.34987 6.07399 7.52799 6 7.74427 6C7.96056 6 8.13867 6.07399 8.27862 6.22197L11.7901 9.93498C11.8664 10.0157 11.9206 10.1031 11.9527 10.1973C11.9847 10.2915 12.0005 10.3924 12 10.5Z" fill="#E9EBEC"/>
-        </svg>        
-      </button>
-        <div  class="ml-7" v-show="activeIndex === 0">
-          <router-link to="/all-customers" class="  p-[10px] pr-0 flex justify-start	rounded-[5px]" >
-          <span 
-          class="place-self-center text-[16px] leading-[21.6px] font-Satoshi500 ">All customers</span>
-        </router-link>
-          <router-link to="/active-users" class="  p-[10px] pr-0 flex justify-start	rounded-[5px]" >
-          <span 
-          class="place-self-center text-[16px] leading-[21.6px]">Active users</span>
-        </router-link>
-        
-          <router-link to="/accounts" class="  p-[10px] pr-0 flex justify-start		rounded-[5px]" >
-          <span 
-          class="place-self-center text-[16px] leading-[21.6px]">Accounts</span>
-        </router-link>
-        
-          <router-link to="/resubmitted-users" class="  p-[10px] pr-0 flex justify-start		rounded-[5px]" >
-          <span 
-          class="place-self-center text-[16px] leading-[21.6px]">Resubmitted users</span>
-        </router-link>
-        
-          <router-link to="/declined-users" class="  p-[10px] pr-0 flex justify-start		rounded-[5px]" >
-          <span 
-          class="place-self-center text-[16px] leading-[21.6px]">Declined users</span>
-        </router-link>
-        
-        </div>
-      </div>
-
-      <div class="pt-[30px] border-t-[#607096] border-t-[1px] px-4 pb-6" >
-        <h4  class="text-[14px] leading-[18.9px] uppercase font-Satoshi700 mb-3">Account Management</h4>
-        <router-link to="/account-management/account-request" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <AccountrequestIcon class="place-self-center"/>
+    <nav class="nav font-Satoshi700">
+      <div class="pb-2 px-4">
+        <router-link
+          to="/account-management/account-request"
+          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
+        >
+          <div class="p-[1px] mr-[3px] rounded-[5px]">
+            <AccountrequestIcon class="place-self-center" />
           </div>
-          <span 
-          class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Account request</span>
+          <span class="place-self-center text-[16px] ml-2 leading-[21.6px]"
+            >Dashboard</span
+          >
         </router-link>
-        <router-link to="/account-management/activity-log" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <ActivitylogIcon class="place-self-center"/>
+        <button
+          @click="toggleAccordion(0)"
+          :class="{ 'bg-[#494886]': activeIndex === 0 }"
+          class="w-full p-[10px] pr-0 flex justify-between rounded-[5px]"
+        >
+          <div class="p-[5px] mr-[20px] rounded-[5px] flex justify-between">
+            <CustomerIcon class="place-self-center" />
+            <span
+              class="place-self-center text-[16px] ml-2 leading-[21.6px] font-Satoshi700 text-black"
+              >System Panel</span
+            >
           </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Activity log</span>
-        </router-link>
-        <router-link to="/account-management/staff" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <StaffIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Staff</span>
-        </router-link>
-
-      <button @click="toggleAccordion(1)" :class="{ 'bg-[#494886]': activeIndex === 1 }" class=" w-full p-[10px] pr-0 flex justify-between		rounded-[5px]" >
-        <div 
-          class=" p-[1px] rounded-[5px] flex gap-2 justify-between">
-             <ComplianceIcon class="place-self-center"/>
-        <span 
-        class="place-self-center text-[16px] ml-[3px] leading-[21.6px] font-Satoshi500 text-white ">Compliance</span>
-        </div>
-        <svg class="place-self-center" :class="{ 'rotate-90': activeIndex === 1 }"  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 10.5C12 10.6076 11.9809 10.712 11.9427 10.8132C11.9046 10.9143 11.8537 10.9983 11.7901 11.065L8.27862 14.778C8.13867 14.926 7.96056 15 7.74427 15C7.52799 15 7.34987 14.926 7.20992 14.778C7.06997 14.63 7 14.4417 7 14.213C7 13.9843 7.06997 13.796 7.20992 13.648L10.187 10.5L7.20992 7.35202C7.06997 7.20404 7 7.0157 7 6.787C7 6.5583 7.06997 6.36996 7.20992 6.22197C7.34987 6.07399 7.52799 6 7.74427 6C7.96056 6 8.13867 6.07399 8.27862 6.22197L11.7901 9.93498C11.8664 10.0157 11.9206 10.1031 11.9527 10.1973C11.9847 10.2915 12.0005 10.3924 12 10.5Z" fill="#E9EBEC"/>
-        </svg>        
-      </button>
-        <div  class="ml-10" v-show="activeIndex === 1">
-          <router-link to="/account-management/all-compliance" class="  p-[10px] pr-0 flex justify-start		rounded-[5px]" >
-          <span 
-          class="place-self-center text-[16px] leading-[21.6px]">All</span>
-        </router-link>
-          <router-link to="/account-management/suspicious-account" class="  p-[10px] pr-0 flex justify-start		rounded-[5px]" >
-          <span 
-          class="place-self-center text-[16px] leading-[21.6px]">Suspicious account</span>
-        </router-link>
-          <router-link to="/account-management/watch-list" class="  p-[10px] pr-0 flex justify-start		rounded-[5px]" >
-          <span 
-          class="place-self-center text-[16px] leading-[21.6px]">Watchlist</span>
-        </router-link>
-        </div>
-        <router-link to="/account-management/blocked-accounts" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <BlockedaccountsIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Blocked accounts</span>
-        </router-link>
-        <router-link to="/account-management/support-ticket" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <SupportTicketIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Support Ticket</span>
-        </router-link>
-        <router-link to="/account-management/messages" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <MessagesIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Messages</span>
-        </router-link>
-        
-      <button @click="toggleAccordion(2)" :class="{ 'bg-[#494886]': activeIndex === 2 }" class=" w-full p-[10px] pr-0 flex justify-between		rounded-[5px]" >
-        <div 
-          class=" p-[1px] rounded-[5px] flex gap-2 justify-between">
-             <TransactionsIcon  class="place-self-center"/>
-        <span 
-            class="place-self-center text-[16px] ml-3 leading-[21.6px]" >Transaction</span>
-        </div>
-        <svg class="place-self-center" :class="{ 'rotate-90': activeIndex === 2 }"  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 10.5C12 10.6076 11.9809 10.712 11.9427 10.8132C11.9046 10.9143 11.8537 10.9983 11.7901 11.065L8.27862 14.778C8.13867 14.926 7.96056 15 7.74427 15C7.52799 15 7.34987 14.926 7.20992 14.778C7.06997 14.63 7 14.4417 7 14.213C7 13.9843 7.06997 13.796 7.20992 13.648L10.187 10.5L7.20992 7.35202C7.06997 7.20404 7 7.0157 7 6.787C7 6.5583 7.06997 6.36996 7.20992 6.22197C7.34987 6.07399 7.52799 6 7.74427 6C7.96056 6 8.13867 6.07399 8.27862 6.22197L11.7901 9.93498C11.8664 10.0157 11.9206 10.1031 11.9527 10.1973C11.9847 10.2915 12.0005 10.3924 12 10.5Z" fill="#E9EBEC"/>
-        </svg>        
-      </button>
-        <div  class="ml-10" v-show="activeIndex === 2">
-          <router-link to="/account-management/all-transactions" class="  p-[10px] pr-0 flex justify-start		rounded-[5px]" >
-          <span 
-          class="place-self-center text-[16px] leading-[21.6px]">All transaction</span>
-        </router-link>
-          <router-link to="/account-management/pending-transactions" class="  p-[10px] pr-0 flex justify-start		rounded-[5px]" >
-          <span 
-          class="place-self-center text-[16px] leading-[21.6px]">Pending transaction</span>
-        </router-link>
-          <router-link to="/account-management/refund-transactions" class="  p-[10px] pr-0 flex justify-start		rounded-[5px]" >
-          <span 
-          class="place-self-center text-[16px] leading-[21.6px]">Refund a transaction</span>
-        </router-link>
-        
+          <svg
+            class="place-self-center"
+            :class="{ 'rotate-90': activeIndex === 0 }"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 10.5C12 10.6076 11.9809 10.712 11.9427 10.8132C11.9046 10.9143 11.8537 10.9983 11.7901 11.065L8.27862 14.778C8.13867 14.926 7.96056 15 7.74427 15C7.52799 15 7.34987 14.926 7.20992 14.778C7.06997 14.63 7 14.4417 7 14.213C7 13.9843 7.06997 13.796 7.20992 13.648L10.187 10.5L7.20992 7.35202C7.06997 7.20404 7 7.0157 7 6.787C7 6.5583 7.06997 6.36996 7.20992 6.22197C7.34987 6.07399 7.52799 6 7.74427 6C7.96056 6 8.13867 6.07399 8.27862 6.22197L11.7901 9.93498C11.8664 10.0157 11.9206 10.1031 11.9527 10.1973C11.9847 10.2915 12.0005 10.3924 12 10.5Z"
+              fill="#E9EBEC"
+            />
+          </svg>
+        </button>
+        <div class="ml-7" v-show="activeIndex === 0">
+          <router-link
+            to="/all-customers"
+            class="p-[10px] pr-0 flex justify-start rounded-[5px]"
+          >
+            <span class="place-self-center text-[16px] leading-[21.6px] font-Satoshi500"
+              >Industry</span
+            >
+          </router-link>
+          <router-link
+            to="/active-users"
+            class="p-[10px] pr-0 flex justify-start rounded-[5px]"
+          >
+            <span class="place-self-center text-[16px] leading-[21.6px]">Competency</span>
+          </router-link>
         </div>
       </div>
-
-      <div class="pt-[30px] border-t-[#607096] border-t-[1px] px-4 pb-6">
-        <h4  class="text-[14px] leading-[18.9px] uppercase font-Satoshi700 mb-3">CUSTOMER METRICS</h4>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <UsertrackingIcon />
+      , , Employers list, talent list, Global mobility, canadidate, professionals,
+      Professionals. recruit
+      <div class="pt-[3px] px-4 pb-2">
+        <router-link
+          to="/account-management/account-request"
+          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
+        >
+          <div class="p-[1px] mr-[3px] rounded-[5px]">
+            <AccountrequestIcon class="place-self-center" />
           </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >User tracking</span>
+          <span class="place-self-center text-[16px] ml-2 leading-[21.6px]">Finder</span>
+        </router-link>
+        <router-link
+          to="/account-management/activity-log"
+          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
+        >
+          <div class="p-[1px] mr-[3px] rounded-[5px]">
+            <ActivitylogIcon class="place-self-center" />
+          </div>
+          <span class="place-self-center text-[16px] ml-2 leading-[21.6px]"
+            >Activation</span
+          >
+        </router-link>
+        <router-link
+          to="/account-management/staff"
+          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
+        >
+          <div class="p-[1px] mr-[3px] rounded-[5px]">
+            <StaffIcon class="place-self-center" />
+          </div>
+          <span class="place-self-center text-[16px] ml-2 leading-[21.6px]">vetting</span>
         </router-link>
 
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <CustomerchurnrateIcon />
+        <button
+          @click="toggleAccordion(1)"
+          :class="{ 'bg-[#494886]': activeIndex === 1 }"
+          class="w-full p-[10px] pr-0 flex justify-between rounded-[5px]"
+        >
+          <div class="p-[1px] rounded-[5px] flex gap-2 justify-between">
+            <ComplianceIcon class="place-self-center" />
+            <span
+              class="place-self-center text-[16px] ml-[3px] leading-[21.6px] font-Satoshi500 text-white"
+              >Compliance</span
+            >
           </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Customer churn rate</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <CACIcon />
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Customer acquisition cost (CAC)</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <ARPUIcon />
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Average revenue per user (ARPU)</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <NetPromoterIcon />
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Net promoter score</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <LVTCRIcon />
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Lifetime value to cost ration</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <CLVIcon />
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Customer lifetime value</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <UserFeedbackIcon />
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >User feedback</span>
-        </router-link>
-        <router-link to="#" class="p-[10px]  pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <ConversionRateIcon />
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Conversion rate</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <RetentionRateIcon />
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Retention rate</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <UserDemographicsIcon />
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >User demographics</span>
-        </router-link>
-        <!-- <router-link to="" class="p-[10px] flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-            class=" p-[10px] mr-[20px] bg-brand/[0.05] rounded-[5px] h-[40px] w-[40px] ">
-              <LogoutIcon />    
-          </div>
-          <span 
-            class="place-self-center	tfont-Satoshi500 text-[16px] leading-[21.6px]" >Logout</span>
-        </router-link> -->
-      </div>
-
-      <div class="pt-[30px] border-t-[#607096] border-t-[1px] px-4 pb-6">
-        <h4  class="text-[14px] leading-[18.9px] uppercase font-Satoshi700 mb-3">Marketing</h4>
-        <router-link to="/marketing/promotional-email" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <PromotionalEmailIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Promotional email</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <ProductsIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Products</span>
-        </router-link>
-        <!-- <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <PaymentLinksIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Payment links</span>
-        </router-link> -->
-
-      <button @click="toggleAccordion(3)" :class="{ 'bg-[#494886]': activeIndex === 3 }" class=" w-full p-[10px] pr-0 flex justify-between		rounded-[5px]" >
-        <div 
-          class=" p-[1px] rounded-[5px] flex gap-2 justify-between">
-             <PaymentLinksIcon class="place-self-center"/>
-        <span 
-            class="place-self-center text-[16px] ml-1 leading-[21.6px]" >Payment links</span>
+          <svg
+            class="place-self-center"
+            :class="{ 'rotate-90': activeIndex === 1 }"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 10.5C12 10.6076 11.9809 10.712 11.9427 10.8132C11.9046 10.9143 11.8537 10.9983 11.7901 11.065L8.27862 14.778C8.13867 14.926 7.96056 15 7.74427 15C7.52799 15 7.34987 14.926 7.20992 14.778C7.06997 14.63 7 14.4417 7 14.213C7 13.9843 7.06997 13.796 7.20992 13.648L10.187 10.5L7.20992 7.35202C7.06997 7.20404 7 7.0157 7 6.787C7 6.5583 7.06997 6.36996 7.20992 6.22197C7.34987 6.07399 7.52799 6 7.74427 6C7.96056 6 8.13867 6.07399 8.27862 6.22197L11.7901 9.93498C11.8664 10.0157 11.9206 10.1031 11.9527 10.1973C11.9847 10.2915 12.0005 10.3924 12 10.5Z"
+              fill="#E9EBEC"
+            />
+          </svg>
+        </button>
+        <div class="ml-10" v-show="activeIndex === 1">
+          <router-link
+            to="/account-management/all-compliance"
+            class="p-[10px] pr-0 flex justify-start rounded-[5px]"
+          >
+            <span class="place-self-center text-[16px] leading-[21.6px]">All</span>
+          </router-link>
+          <router-link
+            to="/account-management/suspicious-account"
+            class="p-[10px] pr-0 flex justify-start rounded-[5px]"
+          >
+            <span class="place-self-center text-[16px] leading-[21.6px]"
+              >Suspicious account</span
+            >
+          </router-link>
+          <router-link
+            to="/account-management/watch-list"
+            class="p-[10px] pr-0 flex justify-start rounded-[5px]"
+          >
+            <span class="place-self-center text-[16px] leading-[21.6px]">Watchlist</span>
+          </router-link>
         </div>
-        <svg class="place-self-center" :class="{ 'rotate-90': activeIndex === 3 }"  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 10.5C12 10.6076 11.9809 10.712 11.9427 10.8132C11.9046 10.9143 11.8537 10.9983 11.7901 11.065L8.27862 14.778C8.13867 14.926 7.96056 15 7.74427 15C7.52799 15 7.34987 14.926 7.20992 14.778C7.06997 14.63 7 14.4417 7 14.213C7 13.9843 7.06997 13.796 7.20992 13.648L10.187 10.5L7.20992 7.35202C7.06997 7.20404 7 7.0157 7 6.787C7 6.5583 7.06997 6.36996 7.20992 6.22197C7.34987 6.07399 7.52799 6 7.74427 6C7.96056 6 8.13867 6.07399 8.27862 6.22197L11.7901 9.93498C11.8664 10.0157 11.9206 10.1031 11.9527 10.1973C11.9847 10.2915 12.0005 10.3924 12 10.5Z" fill="#E9EBEC"/>
-        </svg>        
-      </button>
-        <div  class="ml-10" v-show="activeIndex === 3">
-          <router-link to="/marketing/paymentlinks/multiple-pot" class="  p-[10px] pr-0 flex justify-start		rounded-[5px]" >
-          <span 
-          class="place-self-center text-[16px] leading-[21.6px]">Multiple pot</span>
+        <router-link
+          to="/account-management/blocked-accounts"
+          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
+        >
+          <div class="p-[1px] mr-[3px] rounded-[5px]">
+            <BlockedaccountsIcon class="place-self-center" />
+          </div>
+          <span class="place-self-center text-[16px] ml-2 leading-[21.6px]"
+            >Blocked accounts</span
+          >
         </router-link>
-          <router-link to="/marketing/paymentlinks/single-pot" class="  p-[10px] pr-0 flex justify-start		rounded-[5px]" >
-          <span 
-          class="place-self-center text-[16px] leading-[21.6px]">Single pot</span>
+        <router-link
+          to="/account-management/support-ticket"
+          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
+        >
+          <div class="p-[1px] mr-[3px] rounded-[5px]">
+            <SupportTicketIcon class="place-self-center" />
+          </div>
+          <span class="place-self-center text-[16px] ml-2 leading-[21.6px]"
+            >Support Ticket</span
+          >
         </router-link>
+        <router-link
+          to="/account-management/messages"
+          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
+        >
+          <div class="p-[1px] mr-[3px] rounded-[5px]">
+            <MessagesIcon class="place-self-center" />
+          </div>
+          <span class="place-self-center text-[16px] ml-2 leading-[21.6px]"
+            >Messages</span
+          >
+        </router-link>
+
+        <button
+          @click="toggleAccordion(2)"
+          :class="{ 'bg-[#494886]': activeIndex === 2 }"
+          class="w-full p-[10px] pr-0 flex justify-between rounded-[5px]"
+        >
+          <div class="p-[1px] rounded-[5px] flex gap-2 justify-between">
+            <TransactionsIcon class="place-self-center" />
+            <span class="place-self-center text-[16px] ml-3 leading-[21.6px]"
+              >Transaction</span
+            >
+          </div>
+          <svg
+            class="place-self-center"
+            :class="{ 'rotate-90': activeIndex === 2 }"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 10.5C12 10.6076 11.9809 10.712 11.9427 10.8132C11.9046 10.9143 11.8537 10.9983 11.7901 11.065L8.27862 14.778C8.13867 14.926 7.96056 15 7.74427 15C7.52799 15 7.34987 14.926 7.20992 14.778C7.06997 14.63 7 14.4417 7 14.213C7 13.9843 7.06997 13.796 7.20992 13.648L10.187 10.5L7.20992 7.35202C7.06997 7.20404 7 7.0157 7 6.787C7 6.5583 7.06997 6.36996 7.20992 6.22197C7.34987 6.07399 7.52799 6 7.74427 6C7.96056 6 8.13867 6.07399 8.27862 6.22197L11.7901 9.93498C11.8664 10.0157 11.9206 10.1031 11.9527 10.1973C11.9847 10.2915 12.0005 10.3924 12 10.5Z"
+              fill="#E9EBEC"
+            />
+          </svg>
+        </button>
+        <div class="ml-10" v-show="activeIndex === 2">
+          <router-link
+            to="/account-management/all-transactions"
+            class="p-[10px] pr-0 flex justify-start rounded-[5px]"
+          >
+            <span class="place-self-center text-[16px] leading-[21.6px]"
+              >All transaction</span
+            >
+          </router-link>
+          <router-link
+            to="/account-management/pending-transactions"
+            class="p-[10px] pr-0 flex justify-start rounded-[5px]"
+          >
+            <span class="place-self-center text-[16px] leading-[21.6px]"
+              >Pending transaction</span
+            >
+          </router-link>
+          <router-link
+            to="/account-management/refund-transactions"
+            class="p-[10px] pr-0 flex justify-start rounded-[5px]"
+          >
+            <span class="place-self-center text-[16px] leading-[21.6px]"
+              >Refund a transaction</span
+            >
+          </router-link>
         </div>
-        
-        <router-link to="/marketing/invoice" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <InvoiceIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Invoice</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <ProductCategoryIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Product category</span>
-        </router-link>
-        <router-link :to="{ name:'SubscriptionPlan'}" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <SubscriptionPlansIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Subscription plans</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <EmailPricingIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Email & SMS Pricing</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <WaitingListIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Waiting list</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <PreorderIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-3 leading-[21.6px]" >Preorder</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <CustomDomainIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Custom domain</span>
-        </router-link>
-      </div>
-
-      <div class="pt-[30px] border-t-[#607096] border-t-[1px] px-4 pb-6">
-        <h4 class="text-[14px] leading-[18.9px] uppercase font-Satoshi700 mb-3">Website management</h4>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <CountrySettingsIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Country settings</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <MCCIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >MCC</span>
-        </router-link>
-        <router-link :to="{ name:'Blogs'}" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <BlogIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Blog</span>
-        </router-link>
-        <router-link :to="{ name:'FAQ'}" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <BlogIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >FAQs</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <WebsiteThemeIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Website theme</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <WebsiteDesignIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Website design</span>
-        </router-link>
-      </div>
-
-      <div class="pt-[30px] border-t-[#607096] border-t-[1px] px-4 pb-6">
-        <h4  class="text-[14px] leading-[18.9px] uppercase font-Satoshi700 mb-3">Technical issues</h4>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <BugReportIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Bug report</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <EvolveComplianceIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Evolve compliance</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <WebsiteIntegrationIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Website integration</span>
-        </router-link>
-        <router-link to="#" class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1]	rounded-[5px]" >
-          <div 
-              class=" p-[1px] mr-[3px] rounded-[5px] ">
-             <SettingsIcon class="place-self-center"/>
-          </div>
-          <span 
-            class="place-self-center text-[16px] ml-2 leading-[21.6px]" >Settings</span>
-        </router-link>
       </div>
     </nav>
   </header>
 </template>
 <script setup>
-import CustomerIcon from '@/assets/img/icons/customerIcon.vue';
-import AccountrequestIcon from '@/assets/img/icons/accountrequestIcon.vue';
-import ActivitylogIcon from '@/assets/img/icons/activitylogIcon.vue';
-import StaffIcon from '@/assets/img/icons/staffIcon.vue';
-import ComplianceIcon from '@/assets/img/icons/compliance.vue';
-import BlockedaccountsIcon from '@/assets/img/icons/blockedaccounts.vue';
-import SupportTicketIcon from '@/assets/img/icons/SupportTicket.vue';
-import MessagesIcon from '@/assets/img/icons/messages.vue'
-import TransactionsIcon from '@/assets/img/icons/transactionIcon.vue';
-import UsertrackingIcon from '@/assets/img/icons/usertracking.vue';
-import CustomerchurnrateIcon from '@/assets/img/icons/Customerchurnrate.vue';
-import CACIcon from '@/assets/img/icons/CACicon.vue';
-import ARPUIcon from '@/assets/img/icons/ARPUicon.vue';
-import NetPromoterIcon from '@/assets/img/icons/netPromoterIcon.vue';
-import LVTCRIcon from '@/assets/img/icons/LVTCRicon.vue';
-import CLVIcon from '@/assets/img/icons/CLVicon.vue';
-import UserFeedbackIcon from '@/assets/img/icons/userFeedbackIcon.vue';
-import ConversionRateIcon from '@/assets/img/icons/conversionRateIcon.vue';
-import RetentionRateIcon from '@/assets/img/icons/RetentionRate.vue';
-import UserDemographicsIcon from '@/assets/img/icons/userDemographicsIcon.vue';
-import PromotionalEmailIcon from '@/assets/img/icons/promotionalEmailIcon.vue';
-import ProductsIcon from '@/assets/img/icons/productsIcon.vue';
-import PaymentLinksIcon from '@/assets/img/icons/paymentLinksIcon.vue';
-import InvoiceIcon from '@/assets/img/icons/invoiceIcon.vue';
-import ProductCategoryIcon from '@/assets/img/icons/productCategoryIcon.vue';
-import SubscriptionPlansIcon from '@/assets/img/icons/subscriptionPlansIcon.vue';
-import BlogIcon from '@/assets/img/icons/BlogIcon.vue';
-import EmailPricingIcon from '@/assets/img/icons/emailPricingIcon.vue';
-import WaitingListIcon from '@/assets/img/icons/waitingListIcon.vue';
-import PreorderIcon from '@/assets/img/icons/preorderIcon.vue';
-import CustomDomainIcon from '@/assets/img/icons/customDomainIcon.vue';
-import CountrySettingsIcon from '@/assets/img/icons/countrySettingsIcon.vue';
-import MCCIcon from '@/assets/img/icons/MCCIcon.vue';
-import WebsiteThemeIcon from '@/assets/img/icons/websiteThemeIcon.vue';
-import WebsiteDesignIcon from '@/assets/img/icons/websiteDesignIcon.vue';
-import BugReportIcon from '@/assets/img/icons/bugReportIcon.vue';
-import EvolveComplianceIcon from '@/assets/img/icons/evolveComplianceIcon.vue';
-import WebsiteIntegrationIcon from '@/assets/img/icons/websiteIntegrationIcon.vue';
-import SettingsIcon from '@/assets/img/icons/SettingsIcon.vue';
+import CustomerIcon from "@/assets/img/icons/customerIcon.vue";
+import AccountrequestIcon from "@/assets/img/icons/accountrequestIcon.vue";
+import ActivitylogIcon from "@/assets/img/icons/activitylogIcon.vue";
+import StaffIcon from "@/assets/img/icons/staffIcon.vue";
+import ComplianceIcon from "@/assets/img/icons/compliance.vue";
+import BlockedaccountsIcon from "@/assets/img/icons/blockedaccounts.vue";
+import SupportTicketIcon from "@/assets/img/icons/SupportTicket.vue";
+import MessagesIcon from "@/assets/img/icons/messages.vue";
+import TransactionsIcon from "@/assets/img/icons/transactionIcon.vue";
+import UsertrackingIcon from "@/assets/img/icons/usertracking.vue";
+import CustomerchurnrateIcon from "@/assets/img/icons/Customerchurnrate.vue";
+import CACIcon from "@/assets/img/icons/CACicon.vue";
+import ARPUIcon from "@/assets/img/icons/ARPUicon.vue";
+import NetPromoterIcon from "@/assets/img/icons/netPromoterIcon.vue";
+import LVTCRIcon from "@/assets/img/icons/LVTCRicon.vue";
+import CLVIcon from "@/assets/img/icons/CLVicon.vue";
+import UserFeedbackIcon from "@/assets/img/icons/userFeedbackIcon.vue";
+import ConversionRateIcon from "@/assets/img/icons/conversionRateIcon.vue";
+import RetentionRateIcon from "@/assets/img/icons/RetentionRate.vue";
+import UserDemographicsIcon from "@/assets/img/icons/userDemographicsIcon.vue";
+import PromotionalEmailIcon from "@/assets/img/icons/promotionalEmailIcon.vue";
+import ProductsIcon from "@/assets/img/icons/productsIcon.vue";
+import PaymentLinksIcon from "@/assets/img/icons/paymentLinksIcon.vue";
+import InvoiceIcon from "@/assets/img/icons/invoiceIcon.vue";
+import ProductCategoryIcon from "@/assets/img/icons/productCategoryIcon.vue";
+import SubscriptionPlansIcon from "@/assets/img/icons/subscriptionPlansIcon.vue";
+import BlogIcon from "@/assets/img/icons/BlogIcon.vue";
+import EmailPricingIcon from "@/assets/img/icons/emailPricingIcon.vue";
+import WaitingListIcon from "@/assets/img/icons/waitingListIcon.vue";
+import PreorderIcon from "@/assets/img/icons/preorderIcon.vue";
+import CustomDomainIcon from "@/assets/img/icons/customDomainIcon.vue";
+import CountrySettingsIcon from "@/assets/img/icons/countrySettingsIcon.vue";
+import MCCIcon from "@/assets/img/icons/MCCIcon.vue";
+import WebsiteThemeIcon from "@/assets/img/icons/websiteThemeIcon.vue";
+import WebsiteDesignIcon from "@/assets/img/icons/websiteDesignIcon.vue";
+import BugReportIcon from "@/assets/img/icons/bugReportIcon.vue";
+import EvolveComplianceIcon from "@/assets/img/icons/evolveComplianceIcon.vue";
+import WebsiteIntegrationIcon from "@/assets/img/icons/websiteIntegrationIcon.vue";
+import SettingsIcon from "@/assets/img/icons/SettingsIcon.vue";
 
-import Piggybanq from '@/assets/img/icons/piggybanqIcon.vue';
-import LogoutIcon from '@/assets/img/icons/logoutIcon.vue';
-import { reactive, ref } from 'vue';
+import Piggybanq from "@/assets/img/icons/piggybanqIcon.vue";
+import LogoutIcon from "@/assets/img/icons/logoutIcon.vue";
+import { reactive, ref } from "vue";
 // const state = reactive({
 //   contains: false,
 // });
@@ -519,7 +303,7 @@ function toggleAccordion(index) {
 }
 </script>
 
-<style  scoped>
+<style scoped>
 .rotate-90 {
   transform: rotate(90deg);
 }
@@ -536,88 +320,77 @@ header {
   overflow-y: scroll;
 }
 
-  nav {
-    width: 100%;
-    /* border-top: 1px solid $color-grey-100; */
-    padding-top: 20px;
-    margin-bottom: 10px;
+nav {
+  width: 100%;
+  /* border-top: 1px solid $color-grey-100; */
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding: 10px;
+}
 
-  }
-    .link {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      cursor: pointer;
-      padding: 10px;
-    }   
+.link.router-link-exact-active,
+.link__text {
+  font-weight: 300;
+  /* color: $color-primary; */
+  /* // background-color: rgba($color: $color-primary, $alpha: 0.1); */
+}
 
-      .link.router-link-exact-active ,
+.link__icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: transparent;
+  display: grid;
+  place-items: center;
+  margin-right: 20px;
+}
 
-        .link__text {
-          font-weight: 300;
-          /* color: $color-primary; */
-        /* // background-color: rgba($color: $color-primary, $alpha: 0.1); */
+.link i {
+  font-size: 1.1rem;
+  /* color: $color-grey-400; */
+}
 
-        }
-      
-
-
-        .link__icon {
-        width: 35px;
-        height: 35px;
-        border-radius: 10px;
-        background-color: transparent;
-        display: grid;
-        place-items: center;
-        margin-right: 20px;
-
-      }
-
-         .link i {
-          font-size: 1.1rem;
-          /* color: $color-grey-400; */
-        }
-
-      .link__text {
-        font-size: 0.9rem;
-        /* color: $color-grey-400; */
-      }
-  .cta {
-    display: inline-block;
-    padding: 10px 20px;
-    /* background-color: $color-primary;
+.link__text {
+  font-size: 0.9rem;
+  /* color: $color-grey-400; */
+}
+.cta {
+  display: inline-block;
+  padding: 10px 20px;
+  /* background-color: $color-primary;
     color: $color-white; */
-    font-size: 0.75rem;
-    border-radius: 5px;
-    transition: 0.15s ease;
-  }
-     .cta h4 {
-        font-size: 0.8rem;
-        /* color: $color-grey-300; */
-        padding-inline: 10px;
-        text-transform: uppercase;
-        font-weight: 700;
-      }
-      .link:hover {
-        /* background-color: rgba($color: $color-primary, $alpha: 0.1); */
-        border-radius: 5px;
-      }
- 
+  font-size: 0.75rem;
+  border-radius: 5px;
+  transition: 0.15s ease;
+}
+.cta h4 {
+  font-size: 0.8rem;
+  /* color: $color-grey-300; */
+  padding-inline: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.link:hover {
+  /* background-color: rgba($color: $color-primary, $alpha: 0.1); */
+  border-radius: 5px;
+}
 
-  header::-webkit-scrollbar {
-    width: 0.4vw;
-    cursor: pointer;
+header::-webkit-scrollbar {
+  width: 0.4vw;
+  cursor: pointer;
+}
+header::-webkit-scrollbar-track {
+  background-color: transparent;
+}
 
-  
-  }
-  header::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-
-  header::-webkit-scrollbar-thumb {
-    background-color: #fff;
-    border-radius: 50px;
-  }
-
-
+header::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 50px;
+}
 </style>
