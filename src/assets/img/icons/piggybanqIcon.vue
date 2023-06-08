@@ -1,7 +1,7 @@
 <template>
     <div>
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="40" height="40" rx="5" fill="none" fill-opacity="0.15"/>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="40" rx="5" fill="currentColor" fill-opacity="0.15"/>
         <path d="M21.4909 22.2665H18.1951" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M19.843 20.6578V23.9537" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M20.4351 13.7499L20.4153 13.796L18.5037 18.2322H16.6251C16.1769 18.2322 15.7484 18.3245 15.3595 18.4893L16.513 15.734L16.5394 15.668L16.5855 15.5626C16.5987 15.523 16.6119 15.4835 16.6317 15.4505C17.4952 13.4532 18.4708 12.9984 20.4351 13.7499Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>

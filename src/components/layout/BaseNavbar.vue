@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white text-[#353535] px-0">
+  <header class="bg-white text-[#7b7b7b] px-0">
     <div class="mx">
       <router-link to="/"
         ><img src="@/assets/logo.png" class="w-[60%] mx-auto" alt="Croxx logo"
@@ -13,7 +13,7 @@
           class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
         >
           <div class="p-[1px] mr-[3px] rounded-[5px]">
-            <AccountrequestIcon class="place-self-center" />
+            <EvolveComplianceIcon class="place-self-center" />
           </div>
           <span class="place-self-center text-[16px] ml-2 leading-[21.6px]"
             >Dashboard</span
@@ -27,7 +27,7 @@
           class="w-full p-[10px] pr-0 flex justify-between rounded-full"
         >
           <div class="p-[5px] mr-[20px] rounded-[5px] flex justify-between">
-            <CustomerIcon class="place-self-center" />
+            <CLVIcon class="place-self-center" />
             <span class="place-self-center text-[16px] ml-2 leading-[21.6px]"
               >System Panel</span
             >
@@ -38,7 +38,7 @@
             width="20"
             height="20"
             viewBox="0 0 20 20"
-            fill="none"
+            fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -84,7 +84,7 @@
           class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
         >
           <div class="p-[1px] mr-[3px] rounded-[5px]">
-            <StaffIcon class="place-self-center" />
+            <MessagesIcon class="place-self-center" />
           </div>
           <span class="place-self-center text-[16px] ml-2 leading-[21.6px]">vetting</span>
         </router-link>
@@ -93,7 +93,7 @@
           class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
         >
           <div class="p-[1px] mr-[3px] rounded-[5px]">
-            <StaffIcon class="place-self-center" />
+            <UsertrackingIcon class="place-self-center" />
           </div>
           <span class="place-self-center text-[16px] ml-2 leading-[21.6px]"
             >Employers list</span
@@ -104,7 +104,7 @@
           class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
         >
           <div class="p-[1px] mr-[3px] rounded-[5px]">
-            <StaffIcon class="place-self-center" />
+            <WaitingListIcon class="place-self-center" />
           </div>
           <span class="place-self-center text-[16px] ml-2 leading-[21.6px]"
             >talent list</span
@@ -126,7 +126,7 @@
           class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
         >
           <div class="p-[1px] mr-[3px] rounded-[5px]">
-            <StaffIcon class="place-self-center" />
+            <WebsiteThemeIcon class="place-self-center" />
           </div>
           <span class="place-self-center text-[16px] ml-2 leading-[21.6px]"
             >canadidate</span
@@ -151,7 +151,7 @@
             width="20"
             height="20"
             viewBox="0 0 20 20"
-            fill="none"
+            fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -175,15 +175,11 @@
   </header>
 </template>
 <script setup>
-import CustomerIcon from "@/assets/img/icons/customerIcon.vue";
 import AccountrequestIcon from "@/assets/img/icons/accountrequestIcon.vue";
 import ActivitylogIcon from "@/assets/img/icons/activitylogIcon.vue";
 import StaffIcon from "@/assets/img/icons/staffIcon.vue";
 import ComplianceIcon from "@/assets/img/icons/compliance.vue";
-import BlockedaccountsIcon from "@/assets/img/icons/blockedaccounts.vue";
-import SupportTicketIcon from "@/assets/img/icons/SupportTicket.vue";
 import MessagesIcon from "@/assets/img/icons/messages.vue";
-import TransactionsIcon from "@/assets/img/icons/transactionIcon.vue";
 import UsertrackingIcon from "@/assets/img/icons/usertracking.vue";
 import CustomerchurnrateIcon from "@/assets/img/icons/Customerchurnrate.vue";
 import CACIcon from "@/assets/img/icons/CACicon.vue";

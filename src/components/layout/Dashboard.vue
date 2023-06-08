@@ -1,5 +1,4 @@
 <script setup>
-import Dropdown from "../ui/Dropdown/Dropdown.vue";
 import BaseNavbar from "@/components/layout/BaseNavbar.vue";
 import { onMounted, ref } from "vue";
 import "animate.css";
@@ -74,30 +73,18 @@ const toogleDropdown = (boolean) => {
           <div class="text-right justify-end">
             <div class="flex justify-between gap-3 items-center ml-auto">
               <div class="profile__dropdown relative">
-                <div class="profile__dropdown-text items-center flex p-2 rounded-3xl">
+                <div
+                  class="profile__dropdown-text items-center flex p-2 py-6 rounded-3xl"
+                >
                   <img @click="toogleDropdown()" class="md:block" alt="" />
                   <span
                     class="user-name hidden lg:block font-Satoshi700 text-[16px] leaading-[24px]"
                   ></span>
-                  <svg
-                    class="hidden lg:block"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    stroke="#2B3C87"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                  </svg>
 
                   <div @click="toggle" class="lg:hidden cursor-pointer">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
+                      fill="currentColor"
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
@@ -110,14 +97,6 @@ const toogleDropdown = (boolean) => {
                       />
                     </svg>
                   </div>
-                  <Dropdown
-                    v-if="showDropdown"
-                    :showDropdown="showDropdown"
-                    class="-bottom-14 w-44 z-10 -left-24"
-                    :link="true"
-                    :items="items"
-                    @closeDropdown="toogleDropdown"
-                  />
                 </div>
               </div>
             </div>
