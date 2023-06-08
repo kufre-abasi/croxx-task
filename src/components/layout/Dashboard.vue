@@ -38,7 +38,7 @@ const toogleDropdown = (boolean) => {
 </script>
 
 <template>
-  <div class="bg-[#e5e5e5]">
+  <div class="bg-[#ffffff]">
     <div class="lg:flex">
       <div
         v-if="closeBackdrop"
@@ -52,17 +52,17 @@ const toogleDropdown = (boolean) => {
           <BaseNavbar />
         </div>
       </div>
-      <div class="hidden lg:block flex-shrink-0 md:w-[300px]">
+      <div class="hidden lg:block flex-shrink-0 border-[#d2d7ea] border-r md:w-[300px]">
         <BaseNavbar />
       </div>
       <div class="p-0 flex-grow">
         <nav
-          class="top-menu flex items-center justify-between bg-white py-3 px-4 lg:px-6"
+          class="top-menu flex items-center justify-between bg-white border-[#d2d7ea] border-b py-3 px-4 lg:px-6"
         >
           <div class="lg:hidden">
             <div class="logo">
               <router-link to="/"
-                ><img src="@/assets/logo.png" class="h-8 w-24" alt="Croxx logo"
+                ><img src="@/assets/logo.png" class="h-8" alt="Croxx logo"
               /></router-link>
             </div>
           </div>
