@@ -136,7 +136,21 @@ onMounted(() => {
           <div class="mt-8">
             <div class="flex items-left gap-8 place-content-left mt-4 mx-auto">
               <button @click="prev" class="border-[1px] text-sm rounded-md py-1 px-2">
-                Previous
+                <svg
+                  width="8"
+                  height="14"
+                  viewBox="0 0 8 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 1L1 7L7 13"
+                    stroke="#282929"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               </button>
               <div class="font-Satoshi500 text-[#646868]">
                 <span
@@ -151,7 +165,10 @@ onMounted(() => {
                 <span class="place-self-center px-2 py-1 cursor-pointer">33</span>
               </div>
               <button @click="next" class="border-[1px] text-sm rounded-md py-1 px-2">
-                Next
+                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1.375 1L7.625 7L1.375 13" stroke="#282929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
               </button>
             </div>
           </div>
