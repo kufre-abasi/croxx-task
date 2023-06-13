@@ -66,7 +66,7 @@ const toogleDropdown = (boolean) => {
             </div>
           </div>
           <h3
-            class="lg:block text-[#282929] font-Poppins600 text-[32px] leading-[32.4px] capitalize"
+            class="lg:block hidden text-[#282929] font-Poppins600 text-[32px] leading-[32.4px] capitalize"
           >
             System Panel
           </h3>
