@@ -51,12 +51,12 @@ const toogleDropdown = (boolean) => {
           <BaseNavbar />
         </div>
       </div>
-      <div class="hidden lg:block flex-shrink-0 border-[#d2d7ea] border-r md:w-[300px]">
+      <div class="hidden lg:block flex-shrink-0 border-[#C2DBFF] border-r md:w-[300px]">
         <BaseNavbar />
       </div>
       <div class="p-0 pb-8 flex-grow">
         <nav
-          class="top-menu flex items-center justify-between bg-white border-[#d2d7ea] border-b py-3 px-4 lg:px-6"
+          class="top-menu flex items-center justify-between bg-white border-[#C2DBFF] border-b py-3 px-4 lg:px-6"
         >
           <div class="lg:hidden">
             <div class="logo">
@@ -74,7 +74,7 @@ const toogleDropdown = (boolean) => {
             <div class="flex justify-between gap-3 items-center ml-auto">
               <div class="profile__dropdown relative">
                 <div
-                  class="profile__dropdown-text items-center flex p-2 py-6 rounded-3xl"
+                  class="profile__dropdown-text items-center flex p-2 lg:py-4 py-4 rounded-3xl"
                 >
                   <div class="user-name gap-4 hidden lg:flex">
                     <svg

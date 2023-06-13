@@ -22,7 +22,8 @@
         <button
           @click="toggleAccordion(0)"
           :class="{
-            'bg-[#ebf3fe] border-[#ccf9f9] text-[#3161ad] border-1': activeIndex === 0,
+            'bg-[#EBF3FF] border-[#C2DBFF] text-[#0040A1] border-[1px]':
+              activeIndex === 0,
           }"
           class="w-full p-[10px] pr-0 flex justify-between rounded-full"
         >
@@ -136,7 +137,10 @@
 
         <button
           @click="toggleAccordion(1)"
-          :class="{ 'bg-[#ebf3fe]': activeIndex === 1 }"
+          :class="{
+            'bg-[#EBF3FF] border-[#C2DBFF] text-[#0040A1] border-[1px]':
+              activeIndex === 1,
+          }"
           class="w-full p-[10px] pr-0 flex justify-between rounded-full"
         >
           <div class="p-[1px] rounded-[5px] flex gap-2 justify-between">
