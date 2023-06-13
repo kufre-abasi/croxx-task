@@ -10,7 +10,7 @@
       <div class="px-4">
         <router-link
           to="/"
-          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
+          class="p-[10px] pr-0 flex justify-start hover:bg-[#EBF3FF] hover:border-[#C2DBFF] hover:text-[#0040A1] hover:border-[1px] hover:rounded-[40px]"
         >
           <div class="p-[1px] mr-[3px] rounded-[5px]">
             <EvolveComplianceIcon class="place-self-center" />
@@ -63,7 +63,7 @@
       <div class="px-4 pb-2 capitalize">
         <router-link
           to="/"
-          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
+          class="p-[10px] pr-0 flex justify-start hover:bg-[#EBF3FF] hover:border-[#C2DBFF] hover:text-[#0040A1] hover:border-[1px] hover:rounded-[40px]"
         >
           <div class="p-[1px] mr-[3px] rounded-[5px]">
             <AccountrequestIcon class="place-self-center" />
@@ -72,7 +72,7 @@
         </router-link>
         <router-link
           to="/"
-          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
+          class="p-[10px] pr-0 flex justify-start hover:bg-[#EBF3FF] hover:border-[#C2DBFF] hover:text-[#0040A1] hover:border-[1px] hover:rounded-[40px]"
         >
           <div class="p-[1px] mr-[3px] rounded-[5px]">
             <ActivitylogIcon class="place-self-center" />
@@ -83,7 +83,7 @@
         </router-link>
         <router-link
           to="/"
-          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
+          class="p-[10px] pr-0 flex justify-start hover:bg-[#EBF3FF] hover:border-[#C2DBFF] hover:text-[#0040A1] hover:border-[1px] hover:rounded-[40px]"
         >
           <div class="p-[1px] mr-[3px] rounded-[5px]">
             <MessagesIcon class="place-self-center" />
@@ -92,8 +92,8 @@
         </router-link>
         <router-link
           to="/"
-          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
-        >
+            class="p-[10px] pr-0 flex justify-start hover:bg-[#EBF3FF] hover:border-[#C2DBFF] hover:text-[#0040A1] hover:border-[1px] hover:rounded-[40px]"
+          >
           <div class="p-[1px] mr-[3px] rounded-[5px]">
             <UsertrackingIcon class="place-self-center" />
           </div>
@@ -103,8 +103,8 @@
         </router-link>
         <router-link
           to="/"
-          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
-        >
+            class="p-[10px] pr-0 flex justify-start hover:bg-[#EBF3FF] hover:border-[#C2DBFF] hover:text-[#0040A1] hover:border-[1px] hover:rounded-[40px]"
+          >
           <div class="p-[1px] mr-[3px] rounded-[5px]">
             <WaitingListIcon class="place-self-center" />
           </div>
@@ -114,7 +114,7 @@
         </router-link>
         <router-link
           to="/"
-          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
+          class="p-[10px] pr-0 flex justify-start hover:bg-[#EBF3FF] hover:border-[#C2DBFF] hover:text-[#0040A1] hover:border-[1px] hover:rounded-[40px]"
         >
           <div class="p-[1px] mr-[3px] rounded-[5px]">
             <StaffIcon class="place-self-center" />
@@ -125,7 +125,7 @@
         </router-link>
         <router-link
           to="/"
-          class="p-[10px] pr-0 flex justify-start hover:bg-brand/[0.1] rounded-[5px]"
+          class="p-[10px] pr-0 flex justify-start hover:bg-[#EBF3FF] hover:border-[#C2DBFF] hover:text-[#0040A1] hover:border-[1px] hover:rounded-[40px]"
         >
           <div class="p-[1px] mr-[3px] rounded-[5px]">
             <WebsiteThemeIcon class="place-self-center" />
@@ -243,6 +243,9 @@ function toggleAccordion(index) {
 </script>
 
 <style scoped>
+.nav-item :hover {
+  @apply bg-[#EBF3FF] border-[#C2DBFF] text-[#0040A1] border-[1px];
+}
 .rotate-90 {
   transform: rotate(90deg);
 }
