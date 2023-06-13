@@ -66,9 +66,9 @@ const toogleDropdown = (boolean) => {
             </div>
           </div>
           <h3
-            class="lg:block text-[#001727] font-Poppins500 text-[24px] leading-[32.4px] uppercase"
+            class="lg:block text-[#282929] font-Poppins600 text-[32px] leading-[32.4px] capitalize"
           >
-            {{ title }}
+            System Panel
           </h3>
           <div class="text-right justify-end">
             <div class="flex justify-between gap-3 items-center ml-auto">

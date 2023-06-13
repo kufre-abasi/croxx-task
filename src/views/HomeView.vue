@@ -1,6 +1,11 @@
 <script setup>
 import Layout from "@/components/layout/Dashboard.vue";
 import { onMounted, ref } from "vue";
+import { useStore } from "@/stores/stores";
+let store = useStore();
+onMounted(() => {
+  store.pageTitle = "Store Front";
+});
 </script>
 
 <template>
