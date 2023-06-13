@@ -133,6 +133,28 @@ onMounted(() => {
               </div>
             </div>
           </div>
+          <div class="mt-8">
+            <div class="flex items-left gap-8 place-content-left mt-4 mx-auto">
+              <button @click="prev" class="border-[1px] text-sm rounded-md py-1 px-2">
+                Previous
+              </button>
+              <div class="font-Satoshi500 text-[#646868]">
+                <span
+                  class="place-self-center bg-[#0040A1] p-4 py-2 text-white rounded cursor-pointer"
+                  >1</span
+                >
+                <span class="place-self-center px-2 py-1 cursor-pointer">2</span>
+                <span class="place-self-center px-2 py-1 cursor-pointer">3</span>
+                <span class="place-self-center px-2 py-1 cursor-pointer">4</span>
+                <span class="place-self-center px-2 py-1 cursor-pointer">5</span>
+                <span class="place-self-center px-2 py-1 cursor-pointer">...</span>
+                <span class="place-self-center px-2 py-1 cursor-pointer">33</span>
+              </div>
+              <button @click="next" class="border-[1px] text-sm rounded-md py-1 px-2">
+                Next
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

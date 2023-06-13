@@ -5,7 +5,5 @@ export const useStore = defineStore('user', () => {
     const pageTitle = ref({});
     return { 
         pageTitle,
-
-
     }
 })
