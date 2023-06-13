@@ -7,11 +7,30 @@ import { onMounted, ref } from "vue";
   <main>
     <Layout>
       <div class="lg:px-6 px-3 pt-0 grid grid-rows gap-4">
-        <div class="chart bg-white rounded-[8px] min-h-[100vh] px-4">
+        <div class="chart bg-white rounded-[8px] min-h-[100vh] lg:px-4">
           <div class="border-b border-[#d2d7ea] flex gap-2 py-4 lg:py-6">
             <h4 class="font-Poppins700 text-[20px] font-bold">Industry</h4>
             <div class="border-l border-[#d2d7ea] border-[1px]"></div>
-            <h4 class="font-Poppins400 py-1">Energy Sector</h4>
+            <h4 class="font-Poppins400 py-1 flex">
+              Energy Sector
+              <svg
+                class="mt-2 ml-2"
+                width="14"
+                height="8"
+                viewBox="0 0 14 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.94 1.71249L8.05 6.60249C7.4725 7.17999 6.5275 7.17999 5.95 6.60249L1.06 1.71249"
+                  stroke="#282929"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </h4>
           </div>
           <div class="border-[2px] mt-4 rounded-full w-full overflow-x-auto py-2 p-3">
             <div class="grid grid-flow-col w-full auto-cols-max gap-2">
@@ -23,19 +42,29 @@ import { onMounted, ref } from "vue";
               <button class="font-Poppins500 p-2 text-[#27548d] rounded-full">
                 Well Service
               </button>
-              <button class="font-Poppins500 p-2 text-[#27548d] rounded-full">
+              <button
+                class="font-Poppins500 p-2 md:block hidden text-[#27548d] rounded-full"
+              >
                 Well Service
               </button>
-              <button class="font-Poppins500 p-2 text-[#27548d] rounded-full">
+              <button
+                class="font-Poppins500 p-2 md:block hidden text-[#27548d] rounded-full"
+              >
                 Well Service
               </button>
-              <button class="font-Poppins500 p-2 text-[#27548d] rounded-full">
+              <button
+                class="font-Poppins500 p-2 md:block hidden text-[#27548d] rounded-full"
+              >
                 Well Service
               </button>
-              <button class="font-Poppins500 p-2 text-[#27548d] rounded-full">
+              <button
+                class="font-Poppins500 p-2 md:block hidden text-[#27548d] rounded-full"
+              >
                 Well Service
               </button>
-              <button class="font-Poppins500 p-2 text-[#27548d] rounded-full">
+              <button
+                class="font-Poppins500 p-2 md:block hidden text-[#27548d] rounded-full"
+              >
                 Well Service
               </button>
             </div>
@@ -46,16 +75,24 @@ import { onMounted, ref } from "vue";
               <button class="font-Poppins500 p-0 text-[#c7c9c] rounded-full">
                 Stimulation equipment
               </button>
-              <button class="font-Poppins500 p-2 text-[#c7c9c] rounded-full">
+              <button
+                class="font-Poppins500 md:block hidden p-2 text-[#c7c9c] rounded-full"
+              >
                 Auxillary equipment
               </button>
-              <button class="font-Poppins500 p-2 text-[#c7c9c] rounded-full">
+              <button
+                class="font-Poppins500 md:block hidden p-2 text-[#c7c9c] rounded-full"
+              >
                 cememnting equipment
               </button>
-              <button class="font-Poppins500 p-2 text-[#c7c9c] rounded-full">
+              <button
+                class="font-Poppins500 md:block hidden p-2 text-[#c7c9c] rounded-full"
+              >
                 Down-holes tools
               </button>
-              <button class="font-Poppins500 p-2 text-[#c7c9c] rounded-full">
+              <button
+                class="font-Poppins500 md:block hidden p-2 text-[#c7c9c] rounded-full"
+              >
                 Pressure jobs
               </button>
             </div>
@@ -63,9 +100,9 @@ import { onMounted, ref } from "vue";
           <div
             v-for="item in 5"
             :key="item"
-            class="border-[2px] mt-4 rounded-[30px] w-full flex gap-4 overflow-x-auto py-4 px-3"
+            class="border-[2px] mt-4 rounded-[30px] w-full flex lg:gap-4 gap-2 overflow-x-auto lg:py-4 py-2 px-2 lg:px-3"
           >
-            <img class="w-[5%]" src="@/assets/img/profile-icon.png" alt="" />
+            <img class="lg:w-[5%] w-[15%]" src="@/assets/img/profile-icon.png" alt="" />
             <div class="flex justify-between gap-10 w-full">
               <div>
                 <h3 class="font-Poppins700">Nancy Tukura</h3>
