@@ -6,6 +6,14 @@ let store = useStore();
 onMounted(() => {
   store.pageTitle = "Store Front";
 });
+const data = [
+  { level: "Basic" },
+  { level: "Basic" },
+  { level: "Intermediate" },
+  { level: "Intermediate" },
+  { level: "Expert" },
+  { level: "Expert" },
+];
 </script>
 
 <template>
@@ -77,7 +85,7 @@ onMounted(() => {
             </div>
           </div>
           <div
-            class="border-[1px] border-[#C2DBFF] mt-4 rounded-[20px] overflow-x-auto pt-2 px-4"
+            class="border-[1px] border-[#C2DBFF] lg:block hidden mt-4 rounded-[20px] overflow-x-auto pt-2 px-4"
           >
             <div class="grid grid-flow-col w-full auto-cols-max gap-[2px]">
               <button
@@ -131,7 +139,7 @@ onMounted(() => {
             </div>
           </div>
           <div
-            v-for="item in 5"
+            v-for="item in data"
             :key="item"
             class="border-[1px] border-[#C2DBFF] mt-4 rounded-[30px] w-full flex lg:gap-4 gap-2 overflow-x-auto lg:py-4 py-2 px-2 lg:px-3"
           >
@@ -143,13 +151,18 @@ onMounted(() => {
                   Rainoil. Warri, Rivers . Full-Time
                 </p>
               </div>
-              <div class="md:block hidden">
+              <div class="md:block hidden md:w-[20%]">
                 <h3 class="font-Poppins600">Level</h3>
-                <p
-                  class="font-Poppins400 border-[1px] border-[#726daf] text-[#726daf] px-2 rounded-full text-[14px]"
+                <div
+                  :class="{
+                    'w-2/3': item.level == 'Intermediate',
+                    'w-[32%]': item.level == 'Expert',
+                    'w-[35%]': item.level == 'Basic',
+                  }"
+                  class="font-Poppins400 border-[1px] border-[#726daf] text-[#726daf] w-2/3 px-2 rounded-full text-[14px]"
                 >
-                  Basic
-                </p>
+                  {{ item.level }}
+                </div>
               </div>
               <div class="md:block hidden">
                 <h3 class="font-Poppins600">Score</h3>
