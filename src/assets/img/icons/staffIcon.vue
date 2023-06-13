@@ -1,7 +1,47 @@
 <template>
-    <div>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 6H2V20C2 21.1 2.9 22 4 22H18V20H4V6ZM14 11C15.66 11 17 9.66 17 8C17 6.34 15.66 5 14 5C12.34 5 11 6.34 11 8C11 9.66 12.34 11 14 11ZM14 7C14.55 7 15 7.45 15 8C15 8.55 14.55 9 14 9C13.45 9 13 8.55 13 8C13 7.45 13.45 7 14 7ZM20 2H8C6.9 2 6 2.9 6 4V16C6 17.1 6.9 18 8 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM10.69 16C11.6707 15.3478 12.8222 14.9998 14 14.9998C15.1778 14.9998 16.3293 15.3478 17.31 16H10.69ZM20 15.73C18.53 14.06 16.4 13 14 13C11.6 13 9.47 14.06 8 15.73V4H20V15.73Z" fill="currentColor"/>
-        </svg>
-    </div>
+  <div>
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M7.99998 3H8.99998C7.04998 8.84 7.04998 15.16 8.99998 21H7.99998"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M15 3C16.95 8.84 16.95 15.16 15 21"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M3 9C8.84 7.05 15.16 7.05 21 9"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
 </template>

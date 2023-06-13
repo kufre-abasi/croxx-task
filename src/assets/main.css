@@ -1,6 +1,7 @@
 @import './base.css';
 @import "./fonts/css/satoshi.css";
 @import "./fonts/css/manrope.css";
+@import "./fonts/css/poppins.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

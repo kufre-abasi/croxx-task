@@ -1,0 +1,157 @@
+/**
+ * @license
+ *
+ * Font Family: Poppins
+ * Designed by: Deni Anggara
+ * URL: https://www.fontshare.com/fonts/Poppins
+ * © 2023 Indian Type Foundry
+ *
+ * Font Styles:
+ * Poppins Variable(Variable font)
+ * Poppins Variable Italic(Variable font)
+ * Poppins Light
+ * Poppins Light Italic
+ * Poppins Regular
+ * Poppins Italic
+ * Poppins Medium
+ * Poppins Medium Italic
+ * Poppins Bold
+ * Poppins Bold Italic
+ * Poppins Black
+ * Poppins Black Italic
+ *
+*/
+
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 900.0)
+
+*/
+
+
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 900.0)
+
+*/
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src:
+        url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: 
+        url('../fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins-LightItalic';
+    src:
+        url('../fonts/Poppins-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src:
+        url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins-Italic';
+    src:
+        url('../fonts/Poppins-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src:
+        url('../fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins-MediumItalic';
+    src:
+        url('../fonts/Poppins-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src:
+        url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins-BoldItalic';
+    src:
+        url('../fonts/Poppins-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Poppins-Black';
+    src:
+        url('../fonts/Poppins-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins-BlackItalic';
+    src:
+        url('../fonts/Poppins-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+    font-style: italic;
+}

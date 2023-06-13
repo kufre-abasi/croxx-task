@@ -12,6 +12,11 @@ module.exports = {
         Manrope500: ["Manrope-Medium"],
         Manrope600: ["Manrope-semibold"],
         Manrope700: ["Manrope-Bold"],
+
+        Poppins400: ["Poppins-Regular"],
+        Poppins500: ["Poppins-Medium"],
+        Poppins600: ["Poppins-semibold"],
+        Poppins700: ["Poppins-Bold"],
       },
       colors: {
         primary: {

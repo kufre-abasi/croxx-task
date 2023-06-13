@@ -1,12 +1,12 @@
 <template>
-  <header class="bg-white text-[#7b7b7b] px-0">
-    <div class="mx">
+  <header class="bg-white text-[#282929] px-0">
+    <div class="ml-2 px-4">
       <router-link to="/"
-        ><img src="@/assets/logo.png" class="w-[60%] mx-auto" alt="Croxx logo"
+        ><img src="@/assets/logo.png" class="w-[70%] justify-start" alt="Croxx logo"
       /></router-link>
     </div>
     <!-- The nav -->
-    <nav class="nav font-Satoshi600">
+    <nav class="nav font-Poppins500">
       <div class="px-4">
         <router-link
           to="/"
@@ -26,12 +26,13 @@
           }"
           class="w-full p-[10px] pr-0 flex justify-between rounded-full"
         >
-          <div class="p-[5px] mr-[20px] rounded-[5px] flex justify-between">
+          <div class="p-[0px] mr-[20px] rounded-[5px] flex justify-between">
             <CLVIcon class="place-self-center" />
             <span class="place-self-center text-[16px] ml-2 leading-[21.6px]"
               >System Panel</span
             >
           </div>
+
           <svg
             class="place-self-center"
             :class="{ 'rotate-90': activeIndex === 0 }"
@@ -49,7 +50,7 @@
         </button>
         <div class="ml-7" v-show="activeIndex === 0">
           <router-link to="/" class="p-[10px] pr-0 flex justify-start rounded-[5px]">
-            <span class="place-self-center text-[16px] leading-[21.6px] font-Satoshi500"
+            <span class="place-self-center text-[16px] leading-[21.6px] font-Poppins500"
               >Industry</span
             >
           </router-link>

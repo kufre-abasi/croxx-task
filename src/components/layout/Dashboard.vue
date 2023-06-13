@@ -66,7 +66,7 @@ const toogleDropdown = (boolean) => {
             </div>
           </div>
           <h3
-            class="lg:block text-[#001727] font-Satoshi500 text-[24px] leading-[32.4px] uppercase"
+            class="lg:block text-[#001727] font-Poppins500 text-[24px] leading-[32.4px] uppercase"
           >
             {{ title }}
           </h3>
@@ -78,7 +78,7 @@ const toogleDropdown = (boolean) => {
                 >
                   <img @click="toogleDropdown()" class="md:block" alt="" />
                   <span
-                    class="user-name hidden lg:block font-Satoshi700 text-[16px] leaading-[24px]"
+                    class="user-name hidden lg:block font-Poppins700 text-[16px] leaading-[24px]"
                   ></span>
 
                   <div @click="toggle" class="lg:hidden cursor-pointer">
